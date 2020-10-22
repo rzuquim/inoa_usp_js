@@ -1,0 +1,52 @@
+:root {
+  --bg: #071e36;
+  --question-bg: #041221;
+}
+
+body {
+  background: var(--bg);
+}
+
+.box {
+  background: var(--question-bg);
+}
+
+.navbar {
+  background: var(--question-bg);
+}
+
+.navbar-item {
+  color: ghostwhite;
+}
+
+.white {
+  color: ghostwhite;
+}
+
+.card {
+  overflow: hidden;
+  background: ghostwhite;
+  color: var(--bg);
+}
+
+.card.large {
+  border-radius: 5px;
+}
+
+hr { 
+  height: 1px;
+  background-color: #ccc;
+}
+
+.footer {
+  background: var(--question-bg);
+  color: ghostwhite;
+}
+
+.footer p, strong {
+  color: ghostwhite
+}
+
+.footer a:hover {
+  color: crimson;
+}
