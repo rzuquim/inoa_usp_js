@@ -7,6 +7,14 @@ var naturalNum = 2;
 
 // seu código aqui
 
+function check_natural(n) {
+    return n == Math.round(n) && n > 0;
+}
+
+let isNatural;
+
+isNatural = check_natural(naturalNum);
+
 isNatural === true
 
 // -- another input --
@@ -14,5 +22,7 @@ isNatural === true
 var realNum = 2.57;
 
 // seu código aqui
+
+isNatural = check_natural(realNum);
 
 isNatural === false

@@ -6,5 +6,6 @@
 var num = 137;
 
 // seu código aqui
+let near5 = num - num%5 + 5;
 
 near5 === 140

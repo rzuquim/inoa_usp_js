@@ -9,4 +9,9 @@ var maxLength = 6
 
 // seu código aqui
 
+let truncated = '';
+for(var i = 0; i < maxLength; i++){
+    truncated += input[i];
+}
+
 truncated === 'Do dol'

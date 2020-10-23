@@ -9,4 +9,7 @@ var decimalPlaces = 2;
 
 // seu código aqui
 
+let convert = Math.round(num*100)/10**decimalPlaces;
+console.log(convert);
+
 convert === 0.90

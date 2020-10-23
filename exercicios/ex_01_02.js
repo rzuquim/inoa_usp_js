@@ -7,4 +7,6 @@ var radius = 2;
 
 // seu código aqui
 
+let area = Math.PI*radius**2;
+
 area === 28.274333882308138

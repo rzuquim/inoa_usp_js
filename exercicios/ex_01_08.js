@@ -4,6 +4,11 @@
 // o fundo da página de uma cor aleatória
 // ---------------------------------------
 // seu código aqui
+let r, g, b;
+r = Math.floor(Math.random()*255); //Acho que isso exclui o número 255?
+g = Math.floor(Math.random()*255);
+b = Math.floor(Math.random()*255);
+let randomBg = 'rgb(' + r + ',' + b + ',' + g + ')';
 
 // this will set the background color
 document.body.style.background = randomBg

@@ -8,4 +8,6 @@ var cat_b = 4;
 
 // seu código aqui
 
+let hip = Math.sqrt(cat_a**2 + cat_b**2);
+
 hip === 5

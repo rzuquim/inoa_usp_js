@@ -7,3 +7,5 @@ var min = 1;
 var max = 6;
 
 // seu código aqui
+
+let random_int = Math.round(Math.random()*10);
