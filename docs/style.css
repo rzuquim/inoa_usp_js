@@ -33,7 +33,7 @@ body {
   border-radius: 5px;
 }
 
-hr { 
+hr {
   height: 1px;
   background-color: #ccc;
 }
@@ -43,10 +43,15 @@ hr {
   color: ghostwhite;
 }
 
-.footer p, strong {
-  color: ghostwhite
+.footer p,
+strong {
+  color: ghostwhite;
 }
 
 .footer a:hover {
   color: crimson;
+}
+
+.image.is-64x64 img {
+  border-radius: 50%;
 }
