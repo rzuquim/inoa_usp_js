@@ -50,22 +50,46 @@
 
 // console.log(`Sua bota custa ${product.name}`);
 
-let person = {
-  name: "Joaquim",
-  age: 12,
-};
+// let person = {
+//   name: "Joaquim",
+//   age: 12,
+// };
 
-let legalVotingAge = {
-  br: 16,
-  us: 18,
-};
+// let legalVotingAge = {
+//   br: 16,
+//   us: 18,
+// };
 
-let country = "us";
+// let country = "us";
 
-let message;
+// let message = person.age >= legalVotingAge[country] ? "Pode votar" : "Não vota";
+// console.log(message);
 
-if (person.age >= legalVotingAge[country]) {
-  message = "Pode votar";
+function criadorDeAlunos(nome, numeroUSP) {
+  let aluno = {
+    nome: nome,
+    numeroUSP: numeroUSP,
+  };
+
+  aluno.estudar = (materia) => {
+    for (let hours = 0; hours <= 2; hours++) {
+      console.log(`Estou estudando ${materia} por ${hours}...`);
+    }
+    console.log(`Já deu por hoje`);
+  };
+  return aluno;
 }
 
-console.log(message);
+let rafael = criadorDeAlunos("Rafael", 1234);
+rafael.estudar("matematica");
+
+let veronica = criadorDeAlunos("Veronica", 4321);
+
+let alunos = [rafael, veronica];
+
+let imprimeNome = function (aluno) {
+  console.log(`aluno.nome ${aluno}`);
+  return aluno.nome;
+};
+
+alunos.forEach(imprimeNome);
