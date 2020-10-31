@@ -6,6 +6,20 @@
 var numbers = ;
 
 // seu código aqui
+/* Acho que o enunciado e o output esperado não são do mesmo exercício
+   Fiz uma função que verifica se o número é par (pelo output esperado) e
+   fiz uma outra que trunca um texto (enunciado)
+*/
+var ehPar = (n) => n%2 == 0;
+
+function truncaTexto(texto, n) {
+    if(n < 0) {
+        console.log('n deve ser um número não negativo');
+        return null;
+    }
+    return texto.split(' ').slice(0,n).join(' ');
+}
+
 // output esperado:
 // 1 é ímpar
 // 3 é ímpar

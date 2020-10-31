@@ -25,5 +25,37 @@ var studentGrades = [
 ];
 
 // seu código aqui
+var classGrade = 0;
+for(let i = 0 ; i < studentGrades.length ; i++){
+  classGrade += studentGrades[i][1]
+}
+classGrade = classGrade/studentGrades.length;
+
+if(classGrade < 6)
+  classGrade = 'F';
+else if(classGrade <= 6.2)
+  classGrade = 'D-';
+else if(classGrade <= 6.6)
+  classGrade = 'D';
+else if(classGrade <= 6.9)
+  classGrade = 'D+';
+else if(classGrade <= 7.2)
+  classGrade = 'C-';
+else if(classGrade <= 7.6)
+  classGrade = 'C';
+else if(classGrade <= 7.9)
+  classGrade = 'C+';
+else if(classGrade <= 8.2)
+  classGrade = 'B-';
+else if(classGrade <= 8.6)
+  classGrade = 'B';
+else if(classGrade <= 8.9)
+  classGrade = 'B+';
+else if(classGrade <= 9.2)
+  classGrade = 'A-';
+else if(classGrade <= 9.6)
+  classGrade = 'A';
+else if(classGrade <= 10)
+  classGrade = 'A+';
 
 console.log(classGrade === "B-");

@@ -7,5 +7,8 @@ var binary = '1000101';
 var decimal = null;
 
 // seu código aqui
+for(let i = binary.length - 1 ; i >= 0 ; i--) {
+    decimal += binary[i] * 2**(binary.length - (i + 1))
+}
 
 console.log(decimal === 69);
