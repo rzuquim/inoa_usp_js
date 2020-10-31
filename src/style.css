@@ -52,6 +52,6 @@ strong {
   color: crimson;
 }
 
-.image.is-64x64 img {
+.authorPhoto img {
   border-radius: 50%;
 }
