@@ -55,3 +55,7 @@ strong {
 .authorPhoto img {
   border-radius: 50%;
 }
+
+i.btn {
+  cursor: pointer;
+}

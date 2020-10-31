@@ -1,0 +1,22 @@
+<div class="row columns">
+  <div class="column is-12">
+    <div class="card large">
+      <div class="card-content">
+        <div class="media mb-1">
+          <div class="media-left">
+            <figure class="image is-64x64 authorPhoto">
+              @{postAuthorPhoto}
+            </figure>
+          </div>
+          <div class="media-content">
+            <a class="title is-4" id="post_@{postId}"> @{postTitle} </a>
+            <hr class="my-2" />
+          </div>
+          @{backButton}
+        </div>
+
+        <div class="content">@{postBody}</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -65,43 +65,22 @@
     </footer>
     <!-- \footer -->
 
-    <!-- templates -->
-    <script type="text/template" id="post_template">
-      <div class="row columns">
-        <div class="column is-12">
-          <div class="card large">
-            <div class="card-content">
-              <div class="media mb-1">
-                <div class="media-left">
-                  <figure class="image is-64x64 authorPhoto">
-                    @{postAuthorPhoto}
-                  </figure>
-                </div>
-                <div class="media-content">
-                  <a class="title is-4"id="post_@{postId}">
-                    @{postTitle}
-                  </a>
-                  <hr class="my-2" />
-                </div>
-              </div>
-              <div class="content">@{postBody}</div>
-            </div>
-          </div>
-        </div>
-      </div>      
-    </script>
-    <!-- \templates-->
-
-    <script src="js/app.js"></script>
-    <script src="js/database.js"></script>
-    <script src="js/photos.js"></script>
-    <script src="js/util.js"></script>
-
-    <script>      
-      let blogPosts = loadDatabase();
-      let photosAlbum = loadPhotosAlbum();
-      let app = createApp(blogPosts, photosAlbum, document);
-      app.render();
+    <script src="app.js"></script>
+    <!-- <script src="js/database.js"></script> -->
+    <script src="utils/util.js"></script>
+    <script src="utils/templates.js"></script>
+    <script src="reading/post.js"></script>
+    <script src="reading/postsDatabase.js"></script>
+    <script src="reading/photos.js"></script>
+    
+    <script>
+      loadTemplates((postTemplate) => {
+        let photosAlbum = loadPhotosAlbum();
+        let blogPosts = loadDatabase(photosAlbum, postTemplate);
+        let app = createApp(blogPosts, document);
+        app.renderIndex();
+      });
+      
     </script>
   </body>
 </html>
