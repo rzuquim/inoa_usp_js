@@ -1,9 +1,9 @@
-function loadTemplates(templateReady) {
-  fetch("/reading/post.html")
-    .then((data) => {
-      data.text().then((textData) => {
-        templateReady(textData);
-      });
-    })
-    .catch((err) => console.log("error", err));
+async function loadTemplates(templateReady) {
+  try {
+    let data = await fetch("/reading/post.html");
+    let template = await data.text();
+    templateReady(template);
+  } catch (error) {
+    console.log("error", error);
+  }
 }
