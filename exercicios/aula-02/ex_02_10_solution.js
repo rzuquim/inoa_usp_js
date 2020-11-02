@@ -8,7 +8,7 @@ function numbers(length, start) {
   // seu código aqui
   let array = [];
 
-  if(typeof(start) == 'undefined')
+  if(typeof(start) === 'undefined')
     start = 0;
   for(let i = 0 ; i < length ; i++) {
     array.push(i + start);
@@ -16,5 +16,5 @@ function numbers(length, start) {
   return array;
 }
 
-numbers(10); // [0,1,2,3,4,5,6,7,8,9]
-numbers(10); // [1,2,3,4,5,6,7,8,9, 10]
+console.log(numbers(10)); // [0,1,2,3,4,5,6,7,8,9]
+console.log(numbers(10, 1)); // [1,2,3,4,5,6,7,8,9, 10]

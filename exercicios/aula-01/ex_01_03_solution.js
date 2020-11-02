@@ -6,7 +6,7 @@ var naturalNum = 2;
 
 // 1
 var asNatural = Math.sqrt(Math.floor(naturalNum) ** 2);
-var isNatural = asNatural == naturalNum;
+var isNatural = asNatural === naturalNum;
 
 console.log(isNatural === true);
 

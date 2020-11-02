@@ -1,11 +1,19 @@
 // ---------------------------------------
-// Exercício 15: Escreva uma rotina capture as N primeiras
-// palavras de um texto.
+// Exercício 15: Escreva uma rotina que receba
+// um array de números e imprima para cada um
+// deles se o número é par ou ímpar
 // ---------------------------------------
 
-var text = "The quick brown fox jumps over the lazy dog";
-var words = 3;
+var numbers = [1, 3, 2, 4, 11, 5, 7, 8];
 
 // seu código aqui
 
-console.log(output === "The quick brown");
+// output esperado:
+// 1 é ímpar
+// 3 é ímpar
+// 2 é par
+// 4 é par
+// 11 é ímpar
+// 5 é ímpar
+// 7 é ímpar
+// 8 é par

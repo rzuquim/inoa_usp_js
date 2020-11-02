@@ -15,9 +15,9 @@ let digitos = [['I', 'IV', 'V', 'IX'],
                ['M', 'M', 'M', 'M'],]
 // vai só até 3999, mais que isso vai ficar colocando MMMM...
 for(let i = array.length - 1 ; i >= 0 ; i--) {
-    if(array[i] == 4)
+    if(array[i] === 4)
         roman = roman + digitos[i][1]
-    else if(array[i] == 9)
+    else if(array[i] === 9)
         roman = roman + digitos[i][3]
     else {
         roman = roman + digitos[i][2].repeat( Math.floor(array[i]/5) )
