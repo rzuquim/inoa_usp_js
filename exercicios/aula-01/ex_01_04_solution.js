@@ -1,6 +1,7 @@
 // ---------------------------------------
 // Exercício 4: Escreva uma rotina que gere
-// um número inteiro aleatório
+// um número inteiro aleatório que seja
+// maior ou igual a 1 e menor ou igual a 6
 // ---------------------------------------
 var min = 1;
 var max = 6;
