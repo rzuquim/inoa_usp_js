@@ -1,9 +1,14 @@
 let templatesCatalog = function () {
+  let cache = {};
+
   return {
     load: async function (url) {
+      if (cache[url]) return cache[url];
+
       try {
         let data = await fetch(url);
-        return await data.text();
+        cache[url] = await data.text();
+        return cache[url];
       } catch (error) {
         console.log("error", error);
       }
