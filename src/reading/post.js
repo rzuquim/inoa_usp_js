@@ -1,4 +1,4 @@
-function createPost(id, author, title, body, photosAlbum, postTemplate) {
+function createPost(id, author, title, body, photosAlbum, templates) {
   let post = {
     id: id,
     author: author,
@@ -10,7 +10,8 @@ function createPost(id, author, title, body, photosAlbum, postTemplate) {
   post.summary = (size = 160) => post.body.substring(0, size) + "...";
 
   // render
-  post.renderSummary = () => {
+  post.renderSummary = async () => {
+    let postTemplate = await templates.load("/reading/post.html");
     return postTemplate
       .replace("@{postId}", post.id)
       .replace("@{postTitle}", post.title)
@@ -19,7 +20,8 @@ function createPost(id, author, title, body, photosAlbum, postTemplate) {
       .replace("@{postAuthorPhoto}", `<img src="${post.photo}" />`);
   };
 
-  post.renderFullArticle = () => {
+  post.renderFullArticle = async () => {
+    let postTemplate = await templates.load("/reading/post.html");
     return postTemplate
       .replace("@{postId}", post.id)
       .replace("@{postTitle}", post.title)
@@ -34,8 +36,8 @@ function createPost(id, author, title, body, photosAlbum, postTemplate) {
   };
 
   post.bindActions = (document, mainContent, backFn) => {
-    document.getElementById(`post_${post.id}`).onclick = () => {
-      mainContent.innerHTML = post.renderFullArticle();
+    document.getElementById(`post_${post.id}`).onclick = async () => {
+      mainContent.innerHTML = await post.renderFullArticle();
       document.getElementById(`back`).onclick = backFn;
     };
   };

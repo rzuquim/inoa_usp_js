@@ -5,11 +5,11 @@ function createApp(posts, document) {
 
   let mainContent = document.getElementById("main_content");
 
-  app.renderIndex = function () {
-    mainContent.innerHTML = posts.reduce(
-      (compiled, post) => compiled + post.renderSummary(),
-      ""
-    );
+  app.renderIndex = async function () {
+    let completeIndex = "";
+    for (let i = 0; i < posts.length; i++)
+      completeIndex += await posts[i].renderSummary();
+    mainContent.innerHTML = completeIndex;
 
     // binding buttons
     posts.forEach(function (post) {

@@ -74,13 +74,11 @@
     <script src="reading/photos.js"></script>
     
     <script>
-      loadTemplates((postTemplate) => {
-        let photosAlbum = loadPhotosAlbum();
-        let blogPosts = loadDatabase(photosAlbum, postTemplate);
-        let app = createApp(blogPosts, document);
-        app.renderIndex();
-      });
-      
+      let templates = templatesCatalog();
+      let photosAlbum = loadPhotosAlbum();
+      let blogPosts = loadDatabase(photosAlbum, templates);
+      let app = createApp(blogPosts, document);
+      app.renderIndex();
     </script>
   </body>
 </html>

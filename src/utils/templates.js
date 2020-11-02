@@ -1,9 +1,12 @@
-async function loadTemplates(templateReady) {
-  try {
-    let data = await fetch("/reading/post.html");
-    let template = await data.text();
-    templateReady(template);
-  } catch (error) {
-    console.log("error", error);
-  }
-}
+let templatesCatalog = function () {
+  return {
+    load: async function (url) {
+      try {
+        let data = await fetch(url);
+        return await data.text();
+      } catch (error) {
+        console.log("error", error);
+      }
+    },
+  };
+};
