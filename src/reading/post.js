@@ -11,21 +11,21 @@ function createPost(id, author, title, body, photosAlbum, templates) {
 
   // render
   post.renderSummary = async () => {
-    let postTemplate = await templates.load("/reading/post.html");
+    let postTemplate = await templates.load("/reading/post.summary.html");
     return postTemplate
       .replace("@{postId}", post.id)
       .replace("@{postTitle}", post.title)
       .replace("@{postBody}", post.summary())
-      .replace("@{backButton}", "")
       .replace("@{postAuthorPhoto}", `<img src="${post.photo}" />`);
   };
 
   post.renderFullArticle = async () => {
-    let postTemplate = await templates.load("/reading/post.html");
+    let postTemplate = await templates.load("/reading/post.full.html");
     return postTemplate
       .replace("@{postId}", post.id)
       .replace("@{postTitle}", post.title)
-      .replace("@{postBody}", post.body)
+      .replace("@{firstLetter}", post.body.substring(0, 1))
+      .replace("@{postBody}", post.body.substring(1))
       .replace("@{postAuthorPhoto}", `<img src="${post.photo}" />`)
       .replace(
         "@{backButton}",
