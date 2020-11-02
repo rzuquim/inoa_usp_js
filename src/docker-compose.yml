@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  web:
+    image: nginx
+    container_name: usp-nginx
+    ports:
+        - "80:80"
+    volumes:
+        - "./configs/nginx.conf:/etc/nginx/nginx.conf"
+        - "./web:/www/data"
+
+  api:
+    image: node
+    container_name: usp-api
+
+  db: 
+    image: mongo
+    container_name: usp-mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=password
