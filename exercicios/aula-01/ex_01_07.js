@@ -1,10 +1,11 @@
 
 // ---------------------------------------
-// Exercício 6: Escreva uma rotina que arredonde 
-// um número para o próximo múltiplo de 5
+// Exercício 7: Escreva uma rotina que encontre a 
+// porcentagem de um número
 // ---------------------------------------
 var num = 137;
+var percentage = 47.3
 
 // seu código aqui
 
-near5 === 140
+result === 64.801
