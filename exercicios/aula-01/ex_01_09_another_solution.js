@@ -7,6 +7,11 @@
 var input = 'Do dolore ex et veniam.';
 var maxLength = 6;
 
-var truncated = input.slice(0, maxLength);
+// seu código aqui
 
-console.log(truncated === 'Do dol');
+let truncated = '';
+for(var i = 0; i < maxLength; i++){
+    truncated += input[i];
+}
+
+truncated === 'Do dol'
