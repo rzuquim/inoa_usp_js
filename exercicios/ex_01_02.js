@@ -3,7 +3,7 @@
 // Exercício 2: Escreva uma rotina que 
 // calcule a área de um círculo
 // ---------------------------------------
-var radius = 2;
+var radius = 3;
 
 // seu código aqui
 
