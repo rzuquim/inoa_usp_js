@@ -20,4 +20,8 @@ let util = {
     }
     return numbers;
   },
+  delay(ms = this.randomInt(50, 1000)) {
+    console.log(`waiting for ${ms} ms`);
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  },
 };

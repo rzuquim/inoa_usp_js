@@ -1,0 +1,36 @@
+<div class="row columns">
+  <div class="column is-12">
+    <div class="card large">
+      <div class="card-content">
+        <div class="media mb-1">
+          <div class="media-content">
+            <input
+              id="title_input"
+              class="input is-rounded"
+              type="text"
+              placeholder="Título"
+              value="@{title}"
+            />
+            <hr class="my-2" />
+          </div>
+          <div class="media-right">
+            <i class="btn fa fa-undo fa-lg" id="back"></i>
+            <i class="btn fa fa-save fa-lg" id="save"></i>
+            <i class="btn fa fa-trash fa-lg" id="delete"></i>
+          </div>
+        </div>
+
+        <div class="content">
+          <textarea
+            id="body_input"
+            class="textarea"
+            placeholder="Escreva seu texto aqui..."
+            rows="10"
+          >
+          @{body}
+          </textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

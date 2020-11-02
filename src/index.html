@@ -66,18 +66,19 @@
     <!-- \footer -->
 
     <script src="app.js"></script>
-    <!-- <script src="js/database.js"></script> -->
     <script src="utils/util.js"></script>
     <script src="utils/templates.js"></script>
     <script src="reading/post.js"></script>
     <script src="reading/postsDatabase.js"></script>
     <script src="reading/photos.js"></script>
+    <script src="writing/postEditor.js"></script>
     
     <script>
       let templates = templatesCatalog();
       let photosAlbum = loadPhotosAlbum();
       let blogPosts = loadDatabase(photosAlbum, templates);
-      let app = createApp(blogPosts, document);
+      let editor = createPostEditor(blogPosts, templates);
+      let app = createApp(blogPosts, document, editor);
       app.renderIndex();
     </script>
   </body>

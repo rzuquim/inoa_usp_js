@@ -1,5 +1,5 @@
 let loadDatabase = function (photosAlbum, templates) {
-  let database = [
+  let _database = [
     createPost(
       0,
       "rzuquim@inoa.com.br",
@@ -25,7 +25,48 @@ let loadDatabase = function (photosAlbum, templates) {
       photosAlbum,
       templates
     ),
+    createPost(
+      3,
+      "pessoa@gmail.com",
+      "Do reprehenderit nostrud cillum dolor excepteur consectetur quis commodo et.",
+      `Commodo veniam eiusmod et adipisicing ex reprehenderit tempor. Cupidatat irure est ad officia officia. Labore excepteur qui minim quis in id sint sint cupidatat. Excepteur ea laborum adipisicing deserunt anim deserunt laborum minim ullamco aliqua quis mollit aute. Elit duis veniam adipisicing dolor laboris quis tempor incididunt laborum. Tempor ex quis nisi ipsum amet ullamco laboris non dolore sit voluptate dolor cillum laboris.`,
+      photosAlbum,
+      templates
+    ),
   ];
+
+  database = {};
+
+  database.query = async function () {
+    await util.delay();
+    return [..._database].map((post) => Object.assign({}, post));
+  };
+
+  database.get = async function (postId) {
+    await util.delay();
+    let post = _database.find((post) => post.id === postId);
+    if (post) return Object.assign({}, post);
+    alert(`Não foi possível encontrar o post ${postId}`);
+  };
+
+  database.delete = async (post) => {
+    await util.delay();
+    let indexToDelete = _database.map((p) => p.id).indexOf(post.id);
+    if (indexToDelete >= 0) _database.splice(indexToDelete, 1);
+    else console.error(`Could not find post with id ${post}`);
+  };
+
+  database.save = async (post) => {
+    await util.delay();
+    if (post.id < 0) {
+      console.log("TODO: new post!");
+      return;
+    }
+
+    let indexTo = _database.map((p) => p.id).indexOf(post.id);
+    if (_database[indexTo]) Object.assign(_database[indexTo], post);
+    else alert(`Could not find post ${post.id}`);
+  };
 
   return database;
 };
